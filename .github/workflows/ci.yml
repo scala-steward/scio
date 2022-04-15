@@ -6,7 +6,7 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java 11 setup
@@ -17,7 +17,7 @@ jobs:
   scalafix-rules:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java 11 setup
@@ -28,7 +28,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java ${{matrix.java}} setup
@@ -47,7 +47,7 @@ jobs:
   test-coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java 11 setup
@@ -60,7 +60,7 @@ jobs:
   repl-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java ${{matrix.java}} setup
@@ -79,7 +79,7 @@ jobs:
   mimaReport:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.1
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java ${{matrix.java}} setup
