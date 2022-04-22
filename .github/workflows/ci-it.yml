@@ -11,7 +11,7 @@ jobs:
   it-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.0.2
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: Java 11 setup
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout current branch
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.0.2
       - name: Cache SBT
         uses: coursier/cache-action@v5
       - name: Java 11 setup
